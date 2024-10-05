@@ -28,7 +28,7 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 
 // Allow CORS from your frontend URL
 app.use(cors({
-  origin: "https://netfliixby-utkarsh.netlify.app/", // Change this to your actual frontend URL
+  origin: "https://netfliix-by-utkarsh.netlify.app", // Change this to your actual frontend URL
   credentials: true // If you are using cookies or other credentials
 }));
 
