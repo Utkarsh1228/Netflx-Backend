@@ -27,10 +27,10 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 
 
 // Allow CORS from your frontend URL
-app.use(cors({
-  origin: "https://netfliix-by-utkarsh.netlify.app", // Change this to your actual frontend URL
-  credentials: true // If you are using cookies or other credentials
-}));
+// app.use(cors({
+//   origin: "https://netfliix-by-utkarsh.netlify.app", // Change this to your actual frontend URL
+//   credentials: true // If you are using cookies or other credentials
+// }));
 
 if (ENV_VARS.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
