@@ -6,6 +6,8 @@ export const protectRoute = async (req, res, next) => {
 	try {
 		const token = req.cookies["jwt-netflix"];
 
+		console.log(token);
+
 		if (!token) {
 			return res.status(401).json({ success: false, message: "Unauthorized - No Token Provided" });
 		}
@@ -23,8 +25,6 @@ export const protectRoute = async (req, res, next) => {
 		}
 
 		req.user = user;
-
-		res.json({token});
 
 		next();
 	} catch (error) {

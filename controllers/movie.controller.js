@@ -8,6 +8,8 @@ const headers = {
 
 export async function getTrendingMovie(req, res) {
 	try {
+
+		console.log(res.json())
 		
 		const data = await fetchFromTMDB("https://api.themoviedb.org/3/trending/movie/day?language=en-US", {headers});
 		const randomMovie = data.results[Math.floor(Math.random() * data.results?.length)];
